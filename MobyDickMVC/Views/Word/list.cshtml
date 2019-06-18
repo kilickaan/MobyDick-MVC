@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MobyDickMVC.Models.wordsModel>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Top 10 words of Moby Dick</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.count)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.count)
+        </td>
+    </tr>
+}
+
+</table>
